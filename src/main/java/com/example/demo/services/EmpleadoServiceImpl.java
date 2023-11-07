@@ -36,7 +36,7 @@ public class EmpleadoServiceImpl implements IEmpleadoService {
 	 * @return Empleado
 	 */
 	public Empleado getIdEmpleado(String dni) {
-		return daoEmpleado.findByTrabajo(dni);
+		return daoEmpleado.findByDni(dni);
 	}
 
 	/**

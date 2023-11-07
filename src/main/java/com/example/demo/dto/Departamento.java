@@ -33,10 +33,10 @@ public class Departamento {
 	private String nombre;
 
 	@Column(name = "Presupuesto")
-	private String presupuesto;
+	private int presupuesto;
 
 	@OneToMany
-	@JoinColumn(name = "DNI")
+	@JoinColumn(name = "Codigo")
 	private List<Empleado> empleado;
 
 	/**
@@ -50,7 +50,7 @@ public class Departamento {
 	 * @param nombre
 	 * @param presupuesto
 	 */
-	public Departamento(int codigo, String nombre, String presupuesto) {
+	public Departamento(int codigo, String nombre, int presupuesto) {
 		this.codigo = codigo;
 		this.nombre = nombre;
 		this.presupuesto = presupuesto;
@@ -73,7 +73,7 @@ public class Departamento {
 	/**
 	 * @return the presupuesto
 	 */
-	public String getPresupuesto() {
+	public int getPresupuesto() {
 		return presupuesto;
 	}
 
@@ -103,7 +103,7 @@ public class Departamento {
 	/**
 	 * @param presupuesto the presupuesto to set
 	 */
-	public void setPresupuesto(String presupuesto) {
+	public void setPresupuesto(int presupuesto) {
 		this.presupuesto = presupuesto;
 	}
 

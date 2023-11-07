@@ -12,7 +12,7 @@ import com.example.demo.dto.Empleado;
  */
 public interface IEmpleadoDAO extends JpaRepository<Empleado, String>{
 	
-	Empleado findByTrabajo(String dni);
-	void deleteByTrabajo(String dni);
+	Empleado findByDni(String dni);
+	void deleteByDni(String dni);
 
 }
